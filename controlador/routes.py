@@ -13,8 +13,8 @@ def get_path():
 @app.route("/login",methods=['GET', 'POST'])
 def login():
 	data=request.json
-	correo=data['username']
-	password=data['password']
+	correo=data['correo']
+	password=data['contrasenia']
 	usr=verificaUsuario(correo,password)
 	if usr!=None:
 		return make_response(jsonify(usr), 200)
