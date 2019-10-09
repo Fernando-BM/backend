@@ -4,6 +4,7 @@
 	$ pip install sqlalchemy
 	$ pip install flask-alchemy
 	$ pip install pymysql
+	$ sudo apt-get install python3-pymysql
 
 	
 install:
@@ -59,3 +60,10 @@ sudo nano tail -100 /var/log/apache2/error.log
 reiniciar apache
 
 sudo nano service apache2 restart
+
+
+
+
+
+sudo sqlacodegen --schema 'proyecto1' 'mysql+pymysql://admin:Goy@goy@123!@localhost:3306/proyecto1' --outfile /usr/lib/python3/dist-packages/backend/modelo/basePublibook.py
+

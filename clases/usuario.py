@@ -8,7 +8,7 @@ def verificaUsuario(correo,password):
 	s=obtenerConexion()
 	us=s.query(Usuario).filter(Usuario.correo==correo, Usuario.contrasenia==password).first()
 	if us!= None:
-		usr={"idUser":us.idUsuario, "typeUser":us.idRol}
+		usr={"correoUser":us.correo}
 		return usr
 	else:
 		return None
