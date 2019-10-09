@@ -9,7 +9,7 @@ import os
 def obtenerConexion():
     host = 'localhost'
     user = 'admin'
-    database = 'publibook2.0'
+    database = 'proyecto1'
     password = 'Goy@goy@123!' 
     # create an engine
     connection = 'mysql+pymysql://'+user+':'+password+'@'+host+':3306/'+database
