@@ -1,0 +1,61 @@
+#Paquetes
+	$ python 2.7
+	$ pip install flask
+	$ pip install sqlalchemy
+	$ pip install flask-alchemy
+	$ pip install pymysql
+
+	
+install:
+	$ sudo apt-get install libapache2-mod-wsgi
+
+
+******
+https://platzi.com/tutoriales/1222-java-basico/226-instalar-mysql-y-workbench-en-linux-ubuntu-1404/
+
+
+1. Actualizar paquetes de Linux
+
+sudo apt-get update
+
+2. Instalar el servidor y cliente de MySQL
+
+sudo apt-get install mysql-server mysql-client
+
+Al momento de ejecutar esta línea posteriormente nos pedirá la clave del usuario root. Por defecto colocaremos como contraseña también la palabra “root”.
+
+3. Verificar la versión de MySQL instalada
+
+mysql --version
+
+4.Configurar la Base de Datos
+
+sudo mysql_secure_installation
+
+
+***********
+
+
+#reset apache2
+
+mysql -u root -p
+
+
+
+
+******************************
+ver errors de un 500 SERVER INTERNAL ERROR
+
+/*en tiempo real*/
+sudo nano tail -f /var/log/apache2/error.log
+
+
+/*ultimas 100*/
+sudo nano tail -100 /var/log/apache2/error.log
+
+
+**************Despues de cada cambio************
+
+reiniciar apache
+
+sudo nano service apache2 restart
