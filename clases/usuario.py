@@ -8,7 +8,7 @@ def verificaUsuario(correo,password):
 	s=obtenerConexion()
 	us=s.query(Usuario).filter(Usuario.correo==correo, Usuario.contrasenia==password).first()
 	if us!= None:
-		usr={"idUser":us.idUsuario, "typeUser":us.idRol}
+		usr={"idUser":us.idUsuario}
 		return usr
 	else:
 		return None
@@ -26,7 +26,7 @@ def creaUsuario(dicc):
 	usr.activo=dicc['activo']
 	s.add(usr)
 	s.commit()
-	
+
 
 def obtenUsuarios():
 	s=obtenerConexion()
